@@ -49,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 link.classList.add('active');
             }
         });
+        let headerEl = document.querySelector('header');
+        headerEl.classList.toggle('sticky',window.scrollY > 100)
     });
 
     ScrollReveal({
@@ -57,13 +59,13 @@ document.addEventListener('DOMContentLoaded', function () {
         duration: 2000,
         delay: 200,
     })
-    // ScrollReveal().reveal('.logo, .header-text,.about-img,.technical-bars, .contact-info', {origin: 'left'});
+    ScrollReveal().reveal('.header-text,.about-img,.technical-bars, .contact-info', {origin: 'left'});
 
-    // ScrollReveal().reveal('.bx-moon, .pic,.experience, .tools-box, .contact-form', {origin: 'right'})
+    ScrollReveal().reveal('.pic,.experience, .tools-box, .contact-form', {origin: 'right'})
 
-    // ScrollReveal().reveal('.navbar, .about-content, .skills-heading, .service-header, .contact-header', {origin: 'top'})
+    ScrollReveal().reveal('.about-content, .skills-heading, .service-header, .contact-header', {origin: 'top'})
 
-    // ScrollReveal().reveal('.skills-header, .services-list', {origin: 'bottom'})
+    ScrollReveal().reveal('.skills-header, .services-list', {origin: 'bottom'})
 
 });
 
