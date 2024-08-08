@@ -68,6 +68,15 @@
     .about {
         flex-direction: column-reverse;
     }
+    .about-para {
+        margin: 5%;
+    }
+    .about-content{
+        padding: 0%;
+    }
+    .about-heading {
+        font-size: 3rem;
+    }
 
     .about img {
         width: 70vw;
