@@ -253,7 +253,7 @@ section.about {
 
 /* ----------------skills------------- */
 .skill-container {
-    width: 600px;
+    width: 50%;
     height: auto;
     padding: 40px;
     box-sizing: border-box;
@@ -269,7 +269,7 @@ section.about {
    text-underline-offset: 10px;
    text-decoration-thickness: 5px;
    margin-bottom: 50px;
-   font-size: 32px;
+   font-size: 3rem;
 }
 .skills-header{
     text-align: center;
