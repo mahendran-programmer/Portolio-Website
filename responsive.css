@@ -82,6 +82,15 @@
         width: 70vw;
         margin-top: 4rem;
     }
+
+    .skill-showcase {
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+    .skill-container {
+        width: 100%;
+    }
 }
 
 
@@ -101,5 +110,24 @@
 
     .about-img img {
         width: 90vw;
+    }
+}
+
+@media (max-width: 344px) {
+
+    .icon-container {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .icon-container img {
+       width: 60px;
+       height: 60px;
+    }
+    .tools-box {
+        padding: 15px;
+    }
+    .tool {
+       width: 35%;
     }
 }
