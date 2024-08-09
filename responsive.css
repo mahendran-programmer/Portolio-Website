@@ -6,6 +6,9 @@
     html {
         font-size: 55%;
     }
+    .pic img{
+        width: 40vw;
+    }
 }
 
 @media (max-width: 991px) {
@@ -21,6 +24,13 @@
 @media (max-width: 768px) {
     #menu-icon {
         display: block;
+        position: relative;
+        z-index: 1; /* Ensures menu icon stays clickable */
+    }
+    #moon-icon{
+        position: absolute;
+        right: 60px; /* Adjust based on your design */
+        z-index: 2; /* Places moon icon in front of menu icon */
     }
 
     .navbar {
@@ -46,6 +56,11 @@
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
+        color: var(--text-color);
+        text-align: center;
+    }
+    .navbar a i {
+        display: inline;
     }
 
     .home {
@@ -63,6 +78,7 @@
     .pic img {
         width: 70vw;
         margin-top: 4rem;
+        margin-left: 0;
     }
 
     .about {
