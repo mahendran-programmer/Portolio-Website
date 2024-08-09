@@ -8,14 +8,15 @@
     font-family: 'Poppins', sans-serif;
 }
 :root{
-    --bg-color: #e9f1ff;
-    --text-color: #080808;
-    --main-color: #5dbab3;
-    --currentmain-color: #3d52a0;
-    --white-color: #fdfdfd;
-    --shadow-color: rgba(0, 0, 0, .2);
-    --menu-color: #8700a3;
-    --asset-color: #525400
+    --menu-color: #1A1A2E; /* Deep dark blue */
+    --secondarybg-color: #16213E; /* Slightly lighter dark blue */
+    --asset-color: #0F3460; /* Bold navy blue */
+    --highlight-color: #E94560; /* Vibrant red-pink */
+    --text-color: #FFFFFF; /* White for text */
+    --bg-color: #1B262C; /* Dark slate background */
+    --button-hover-color: #F05454; /* Lighter red for hover */
+    --input-background: #1A1A2E; /* Dark input background */
+    --input-border: #E94560; /* Red-pink border for inputs */
 }
 
 html{
@@ -51,6 +52,7 @@ section {
 }
 section.about {
     padding: 10rem 9% 9rem;
+    background: var(--secondarybg-color);
 }
 
 .logo{
@@ -107,9 +109,10 @@ section.about {
 }
 
 .pic img{
-    width: 35vw;
-    box-shadow: 0 0 1rem var(--menu-color);
+    width: 30vw;
+    box-shadow: 0 0 1rem var(--button-hover-color);
     border-radius: 50%;
+    margin-left: 5rem;
 }
 
 .header-text h3{
@@ -117,12 +120,12 @@ section.about {
     font-weight: 700;
 }
 .header-text h3 span{
-    color: var(--menu-color);
+    color: var(--highlight-color);
 }
 .header-text h1{
     font-size: 5.6rem;
     font-weight: 700;
-    color: var(--menu-color);
+    color: var(--highlight-color);
     line-height: 1.3;
 }
 .header-text p{
@@ -147,9 +150,9 @@ section.about {
 }
 
 .home-sci a:hover{
-    background: transparent;
+    /* background: transparent; */
     color: var(--text-color);
-    box-shadow: 0 0 20px var(--asset-color);
+    box-shadow: 0 0 20px var(--button-hover-color)
 }
 
 .btn-box{
@@ -158,7 +161,7 @@ section.about {
     background: var(--asset-color);
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: var(--white-color);
+    color: var(--text-color);
     letter-spacing: 0.1rem;
     text-decoration: none;
     font-weight: 600;
@@ -168,7 +171,10 @@ section.about {
 }
 
 .btn-box:hover{
-    box-shadow: none;
+    background: transparent;
+    color: var(--text-color);
+    box-shadow: 0 0 20px var(--button-hover-color);
+    cursor: pointer;
 }
 /* -----------about--------------- */
 .about{
@@ -182,7 +188,7 @@ section.about {
 .about-img img{
    width: 26vw;
    cursor: pointer;
-   box-shadow: 0px 0px 9px 2px var(--menu-color);
+   box-shadow: 0px 0px 9px 2px var(--button-hover-color);
 }
 
 .about-heading{
@@ -199,7 +205,7 @@ section.about {
     font-size: 1.9rem;
 }
 .intro{
-    color: var(--menu-color);
+    color: var(--highlight-color);
 }
 .experience-heading{
     text-align: center;
@@ -216,13 +222,13 @@ section.about {
     background-color: transparent;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px var(--menu-color);
     margin-bottom: 20px;
     border: 1px solid var(--menu-color);
     transition: background 0.5s, transform 0.5s;
 }
 .experience-card:hover{
-   box-shadow: 0px 0px 9px 2px var(--menu-color);
+   box-shadow: 0 4px 8px var(--button-hover-color);
    background: transparent;
    transform: translateY(-5px);
    color: var(--text-color);
@@ -313,7 +319,7 @@ section.about {
 }
 .technical-bars .bar .progress-line span{
     height: 100%;
-    background-color: var(--menu-color);
+    background-color: var(--highlight-color);
     position: absolute;
     border-radius: 10px;
     animation: animate 1s 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
@@ -424,10 +430,10 @@ section.about {
 }
 .tools-box {
     padding: 20px;
-    border: 2px solid var(--menu-color); /* Green border for the box */
+    /* border: 2px solid var(--asset-color); */
     border-radius: 10px;
     background-color: transparent; /* Black background */
-   box-shadow: 0px 0px 9px 2px var(--menu-color);
+   box-shadow: 0px 0px 9px 2px var(--button-hover-color);
 }
 .tool {
     display: flex;
@@ -517,6 +523,9 @@ section.about {
     margin-bottom: 20px;
 }
 /* -------portfolio----------- */
+section.projects{
+    background-color: var(--secondarybg-color);
+    }
 #portfolio{
     padding: 50px 0;
 }
@@ -624,9 +633,9 @@ section.about {
 .contact-info, .contact-form {
     width: 100%;
     padding: 2.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 6px 8px 0px var(--button-hover-color);
     border-radius: 10px;
-    background: #fdfdfd;
+    background: var(--input-background);
     margin-bottom: 2rem;
 }
 
@@ -676,8 +685,8 @@ section.about {
 
 .cvbtn:hover, .submitbtn:hover {
     background: transparent;
-    color: var(--white-color);
-    box-shadow: 0 0 20px var(--asset-color);
+    color: var(--text-color);
+    box-shadow: 0 0 20px var(--button-hover-color);
     cursor: pointer;
 }
 
@@ -703,7 +712,7 @@ section.about {
     color: var(--text-color);
     padding: 0 10px;
     background: transparent;
-    border: 1.5px solid var(--text-color);
+    border: 1.5px solid var(--input-border);
     outline: none;
     border-radius: 5px;
 }
@@ -714,7 +723,7 @@ section.about {
     padding: 10px;
     font-size: 16px;
     color: var(--text-color);
-    border: 1.5px solid var(--text-color);
+    border: 1.5px solid var(--input-border);
     outline: none;
     border-radius: 5px;
 }
@@ -722,13 +731,13 @@ section.about {
 .input-group textarea:valid~label{
     top: 0;
     font-size: 12px;
-    background: var(--white-color);
+    background: var(--input-background);
 }
 .input-group input:focus~label,
 .input-group input:valid~label{
     top: 0;
     font-size: 12px;
-    background: var(--white-color);
+    background: var(--input-background);
 }
 
 .social-icons {
@@ -774,7 +783,6 @@ section.about {
     color: #fff;
     padding: 10px 0;
     text-align: center;
-    margin-top: 50px;
 }
 .footer-container {
     max-width: 1200px;

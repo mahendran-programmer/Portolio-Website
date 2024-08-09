@@ -70,4 +70,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+function ShowForm() {
+    const form = document.getElementById('contact-form');
+    const card = document.getElementById('contact-card');
+    
+    form.classList.toggle('active');
+    card.style.display = form.classList.contains('active') ? 'none' : 'block';
+}
+
 
