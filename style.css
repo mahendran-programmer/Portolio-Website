@@ -5,18 +5,60 @@
     text-decoration: none;
     outline: none;
     scroll-behavior: smooth;
+}
+:root {
+    --menu-color: linear-gradient(135deg, #004E92, #009FFF); /* Deep blue to bright cyan */
+    --secondarybg-color: linear-gradient(135deg, #A2C2E1, #E4F0F8); /* Light blue to very light blue */
+    --asset-color: #0062E6; /* Strong blue */
+    --highlight-color: #33AEFF; /* Soft cyan highlight */
+    --highlight-color-dark: #0062E6; /* Deep blue highlight */
+    --text-color: #333333; /* Dark gray text */
+    --bg-color: linear-gradient(135deg, #F4F7FA, #E1E8F0); /* Light gray to very light gray-blue */
+    --button-bg: linear-gradient(135deg, #0062E6, #33AEFF); /* Gradient button background */
+    --button-hover-bg: linear-gradient(135deg, #0051A4, #009BFF); /* Darker blue for hover */
+    --input-background: #FFFFFF; /* Solid white input background */
+    --input-border: #0062E6; /* Solid blue input border */
+}
+
+/* Dark Mode Colors */
+[data-theme='dark'] {
+    --menu-color: linear-gradient(135deg, #003366, #004E92); /* Dark blue to deep blue */
+    --secondarybg-color: linear-gradient(135deg, #1E2A38, #2F3A4D); /* Very dark blue to dark gray-blue */
+    --asset-color: #0062E6; /* Deep blue */
+    --highlight-color-dark: #0062E6; /* Deep blue highlight */
+    --text-color: #E0E0E0; /* Light gray text */
+    --bg-color: linear-gradient(135deg, #1E2A38, #2F3A4D); /* Dark blue-gray gradient */
+    --button-bg: linear-gradient(135deg, #004E92, #0062E6); /* Dark blue button background */
+    --button-hover-bg: linear-gradient(135deg, #003366, #004E92); /* Darker gradient for hover */
+    --input-background: #2F3A4D; /* Dark gray-blue input background */
+    --input-border: #0062E6; /* Deep blue input border */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
     font-family: 'Poppins', sans-serif;
 }
-:root{
-    --menu-color: #1A1A2E; /* Deep dark blue */
-    --secondarybg-color: #16213E; /* Slightly lighter dark blue */
-    --asset-color: #0F3460; /* Bold navy blue */
-    --highlight-color: #E94560; /* Vibrant red-pink */
-    --text-color: #FFFFFF; /* White for text */
-    --bg-color: #1B262C; /* Dark slate background */
-    --button-hover-color: #F05454; /* Lighter red for hover */
-    --input-background: #1A1A2E; /* Dark input background */
-    --input-border: #E94560; /* Red-pink border for inputs */
+
+.intro {
+    font-family: 'Lora', sans-serif;
+    letter-spacing: 1;
+}
+
+blockquote {
+    font-family: 'Lora', serif;
+    border-left: 4px solid #ddd;
+    padding-left: 16px;
+    margin: 16px 0;
+    color: #555;
 }
 
 html{
@@ -41,6 +83,7 @@ body{
    align-items: center;
    justify-content: space-between;
    z-index: 100;
+   color: #fff;
 }
 .header.sticky {
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
@@ -60,7 +103,7 @@ section.about {
     margin-right: auto;
     font-weight: 600;
     cursor: default;
-    color: var(--bg-color);
+    color: #fff;
 }
 
 .navbar a {
@@ -110,7 +153,7 @@ section.about {
 
 .pic img{
     width: 30vw;
-    box-shadow: 0 0 1rem var(--button-hover-color);
+    box-shadow: 0 0 1rem var(--highlight-color);
     border-radius: 50%;
     margin-left: 5rem;
 }
@@ -125,7 +168,7 @@ section.about {
 .header-text h1{
     font-size: 5.6rem;
     font-weight: 700;
-    color: var(--highlight-color);
+    color: var(--highlight-color-dark);
     line-height: 1.3;
 }
 .header-text p{
@@ -157,24 +200,25 @@ section.about {
 
 .btn-box{
     display: inline-block;
-    padding: 1rem 2.8rem;
-    background: var(--asset-color);
     border-radius: 4rem;
     font-size: 1.6rem;
-    color: var(--text-color);
     letter-spacing: 0.1rem;
     text-decoration: none;
     font-weight: 600;
     transition: 0.5s;
-    border: none;
     box-shadow: 0 0 1rem var(--menu-color);
+    background: var(--button-bg);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .btn-box:hover{
-    background: transparent;
-    color: var(--text-color);
-    box-shadow: 0 0 20px var(--button-hover-color);
-    cursor: pointer;
+    background: var(--button-hover-bg);
+    transform: scale(1.05);
 }
 /* -----------about--------------- */
 .about{
@@ -188,7 +232,7 @@ section.about {
 .about-img img{
    width: 26vw;
    cursor: pointer;
-   box-shadow: 0px 0px 9px 2px var(--button-hover-color);
+   box-shadow: 0px 0px 9px 2px var(--highlight-color);
 }
 
 .about-heading{
@@ -222,13 +266,13 @@ section.about {
     background-color: transparent;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px var(--menu-color);
+    box-shadow: 0 4px 8px var(--highlight-color);
     margin-bottom: 20px;
-    border: 1px solid var(--menu-color);
+    border: 1px solid var(--highlight-color-dark);
     transition: background 0.5s, transform 0.5s;
 }
 .experience-card:hover{
-   box-shadow: 0 4px 8px var(--button-hover-color);
+   box-shadow: 0 4px 8px var(--highlight-color-dark);
    background: transparent;
    transform: translateY(-5px);
    color: var(--text-color);
@@ -307,7 +351,7 @@ section.about {
     border-radius: 10px;
     width: 100%;
     height: 5px;
-    background-color: var(--white-color);
+    background-color: var(--text-color);
     animation: animate 1s cubic-bezier(0.42, 0, 0.58, 1) forwards;
     transform: scaleX(0);
     transform-origin: left;
@@ -633,7 +677,7 @@ section.projects{
 .contact-info, .contact-form {
     width: 100%;
     padding: 2.5rem;
-    box-shadow: 6px 6px 8px 0px var(--button-hover-color);
+    box-shadow:  0px 3px 5px 0px var(--button-hover-color);
     border-radius: 10px;
     background: var(--input-background);
     margin-bottom: 2rem;
@@ -671,23 +715,24 @@ section.projects{
     width: fit-content;
     margin: 20px auto;
     padding: 12px 28px;
-    background: var(--asset-color);
-    border-radius: 50px;
-    font-size: 15px;
-    color: var(--white-color);
-    letter-spacing: 0.5px;
     text-decoration: none;
     font-weight: 600;
     margin-top: 20px;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    border: 2px solid transparent;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    transition: 0.5s;
+    box-shadow: 0 0 1rem var(--menu-color);
+    background: var(--button-bg);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .cvbtn:hover, .submitbtn:hover {
-    background: transparent;
-    color: var(--text-color);
-    box-shadow: 0 0 20px var(--button-hover-color);
-    cursor: pointer;
+    background: var(--button-hover-bg);
+    transform: scale(1.05);
 }
 
 .input-group{
@@ -779,7 +824,7 @@ section.projects{
 }
 /* footer */
 .footer {
-    background-color: var(--menu-color);
+    background: var(--menu-color);
     color: #fff;
     padding: 10px 0;
     text-align: center;
