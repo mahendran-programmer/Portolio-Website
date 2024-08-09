@@ -29,6 +29,13 @@ menuicon.addEventListener('click', () => {
     menuicon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 });
+let navLinks = document.querySelectorAll('.navbar a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuicon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    });
+});
 
 //Highlighting the Menu which activated
 document.addEventListener('DOMContentLoaded', function () {
@@ -66,19 +73,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     ScrollReveal().reveal('.pic,.experience, .tools-box, .contact-form', {origin: 'right'})
 
-    ScrollReveal().reveal('.about-content, .skills-heading, .service-header, .contact-header', {origin: 'top'})
+    ScrollReveal().reveal('.about-content, .skills-heading, .service-header, .contact-header , .skills-header', {origin: 'top'})
 
-    ScrollReveal().reveal('.skills-header, .services-list', {origin: 'bottom'})
+    ScrollReveal().reveal('.services-list', {origin: 'bottom'})
 
 });
 
-
-function ShowForm() {
-    const form = document.getElementById('contact-form');
-    const card = document.getElementById('contact-card');
-    
-    form.classList.toggle('active');
-    card.style.display = form.classList.contains('active') ? 'none' : 'block';
-}
 
 

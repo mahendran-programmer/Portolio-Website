@@ -114,6 +114,9 @@ section.about {
     margin-right: 3.5rem;
     text-decoration: none;
 }
+.navbar a i {
+    display: none;
+}
 
 .navbar a::before {
     content: '';
@@ -477,7 +480,7 @@ section.about {
     /* border: 2px solid var(--asset-color); */
     border-radius: 10px;
     background-color: transparent; /* Black background */
-   box-shadow: 0px 0px 9px 2px var(--button-hover-color);
+   box-shadow: 0px 0px 9px 2px var(--highlight-color);
 }
 .tool {
     display: flex;
@@ -531,7 +534,7 @@ section.about {
     margin-top: 50px;
 }
 .services-list div{
-    background: var(--asset-color);
+    background: var(--menu-color);
     padding: 30px;
     text-align: center;
     font-size: 16px;
