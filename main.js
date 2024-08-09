@@ -10,8 +10,11 @@ var typed = new Typed(".role",{
 const toggleSwitch = document.getElementById('moon-icon');
 
 toggleSwitch.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    if (document.body.classList.contains('dark-mode')) {
+    // Toggle the dark mode on the HTML element
+    document.documentElement.setAttribute('data-theme', document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    
+    // Toggle the moon/sun icon class
+    if (document.documentElement.getAttribute('data-theme') === 'dark') {
         toggleSwitch.classList.replace('bx-moon', 'bx-sun');
     } else {
         toggleSwitch.classList.replace('bx-sun', 'bx-moon');
